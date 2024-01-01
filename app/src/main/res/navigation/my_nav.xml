@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment2">
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.example.todolistapp.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment2_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_splashFragment2_to_homeFragment"
+            app:destination="@id/appbarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.todolistapp.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_homeFragment"
+            app:destination="@id/appbarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appbarFragment"
+        android:name="com.example.todolistapp.onboarding.screen.AppBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="appbar" >
+    </fragment>
+    <fragment
+        android:id="@+id/list_task"
+        android:name="com.example.todolistapp.onboarding.screen.ListTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <fragment
+        android:id="@+id/complete_task"
+        android:name="com.example.todolistapp.onboarding.screen.CalendarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <action
+        android:id="@+id/action_bottomSheetFragment_to_fragmentListTask"
+        app:destination="@id/list_task" />
+
+</navigation>

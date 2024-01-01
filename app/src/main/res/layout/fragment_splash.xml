@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashFragment"
+    android:background="@color/purple1">
+
+    <ImageView
+        android:id="@+id/todolist"
+        android:layout_width="340dp"
+        android:layout_height="330dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/todolist"/>
+
+    <TextView
+        android:id="@+id/to_do_list"
+        android:layout_width="131dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="400dp"
+        android:fontFamily="@font/irish_grover"
+        android:gravity="top"
+        android:text="To Do List"
+        android:textColor="#F5E8C7"
+        android:textSize="25sp" />
+
+</FrameLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_notes"
+        android:icon="@drawable/ic_baseline_note_add_24"
+        android:title="List task"/>
+
+    <item
+        android:id="@+id/nav_blank"
+        android:title=""/>
+
+    <item
+        android:id="@+id/nav_done"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:title="Complete task"/>
+
+
+</menu>
