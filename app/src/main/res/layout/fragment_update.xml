@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@drawable/sheet_bg"
-    android:id="@+id/sheet"
-    android:theme="@style/FormTheme">
+    android:id="@+id/updateLayout"
+    android:theme="@style/FormTheme"
+    tools:context=".onboarding.screen.UpdateFragment">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="New Task"
+        android:text="Update task"
         android:textSize="30sp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
@@ -21,14 +21,15 @@
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="45dp"
         android:layout_marginVertical="10dp"
+
         android:layout_marginHorizontal="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/add_nama_task"
+            android:id="@+id/update_nama_task"
             android:hint="Name"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -43,7 +44,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/add_deskripsi_task"
+            android:id="@+id/update_deskripsi_task"
             android:hint="Description"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -59,20 +60,19 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:id="@+id/add_date_task"
+            android:id="@+id/update_date_task"
             android:hint="date"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/submit"
+        android:id="@+id/submit_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="20dp"
         android:backgroundTint="@color/white"
-        android:text="Save" />
+        android:text="Update" />
+
 
 </LinearLayout>

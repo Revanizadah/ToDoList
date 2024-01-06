@@ -1,6 +1,7 @@
 package com.example.todolistapp.room
 
 import android.content.Context
+import androidx.lifecycle.ViewModelProvider.NewInstanceFactory.Companion.instance
 import androidx.room.Room
 import androidx.room.TypeConverters
 
@@ -33,18 +34,18 @@ abstract class NoteDB : RoomDatabase() {
 
 //        private val LOCK = Any()
 //
-//        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
+//        operator fun invoke(context: Context) = INSTANCE ?: synchronized(LOCK) {
 //            instance ?: buildDatabase(context).also {
 //                instance = it
 //            }
 //        }
-//
-//        private fun buildDatabase(context: Context) =
-//            Room.databaseBuilder(
-//                context.applicationContext,
-//                NoteDB::class.java,
-//                "note.db"
-//            ).build()
+
+        private fun buildDatabase(context: Context) =
+            Room.databaseBuilder(
+                context.applicationContext,
+                NoteDB::class.java,
+                "note.db"
+            ).build()
     }
 }
 

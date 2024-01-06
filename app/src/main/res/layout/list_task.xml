@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="170dp"
+    android:id="@+id/rowList">
 
 
 
@@ -10,15 +11,20 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         >
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            >
+
+
 
             <TextView
                 android:id="@+id/nama_task"
@@ -33,11 +39,31 @@
             <TextView
                 android:id="@+id/deskripsi_task"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:text="@string/lorem"
                 android:textSize="14sp"
-                android:textColor="#333333"/>
+                android:textColor="#333333"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/date_task"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/lorem"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+
+
         </LinearLayout>
+        <!-- Button Delete -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="delete"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="220dp"
+            android:backgroundTint="@color/teal_700"/>
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

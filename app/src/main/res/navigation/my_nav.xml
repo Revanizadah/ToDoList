@@ -8,42 +8,65 @@
         android:id="@+id/splashFragment2"
         android:name="com.example.todolistapp.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment2_to_viewPagerFragment"
-            app:destination="@id/viewPagerFragment" />
-        <action
-            android:id="@+id/action_splashFragment2_to_homeFragment"
-            app:destination="@id/appbarFragment" />
+        tools:layout="@layout/fragment_splash">
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
         android:name="com.example.todolistapp.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager"
-        tools:layout="@layout/fragment_view_pager" >
-        <action
-            android:id="@+id/action_viewPagerFragment_to_homeFragment"
-            app:destination="@id/appbarFragment" />
+        tools:layout="@layout/fragment_view_pager">
     </fragment>
     <fragment
-        android:id="@+id/appbarFragment"
+        android:id="@+id/appbar"
         android:name="com.example.todolistapp.onboarding.screen.AppBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:tag="appbar" >
+        android:tag="appbar">
     </fragment>
     <fragment
-        android:id="@+id/list_task"
+        android:id="@+id/listFragment"
         android:name="com.example.todolistapp.onboarding.screen.ListTask"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_list_task">
+    </fragment>
     <fragment
         android:id="@+id/complete_task"
         android:name="com.example.todolistapp.onboarding.screen.CalendarFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        />
+    <fragment
+        android:id="@+id/updateLayout"
+        android:name="com.example.todolistapp.onboarding.screen.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update">
+        <argument
+            android:name="currentNote"
+            app:argType="com.example.todolistapp.room.Note" />
+    </fragment>
+
+
     <action
-        android:id="@+id/action_bottomSheetFragment_to_fragmentListTask"
-        app:destination="@id/list_task" />
+        android:id="@+id/action_list_task_to_updateFragment"
+        app:destination="@id/updateLayout" />
+    <action
+        android:id="@+id/action_bottomSheet_to_fragmentListTask"
+        app:destination="@id/listFragment"/>
+    <action
+        android:id="@+id/action_viewPagerFragment_to_homeFragment"
+        app:destination="@id/appbar" />
+    <action
+        android:id="@+id/action_splashFragment2_to_viewPagerFragment"
+        app:destination="@id/viewPagerFragment" />
+    <action
+        android:id="@+id/action_splashFragment2_to_homeFragment"
+        app:destination="@id/appbar" />
+    <action
+        android:id="@+id/action_updateFragment_to_list_task"
+        app:destination="@id/listFragment" />
+    <action
+        android:id="@+id/action_updateLayout_to_appbar"
+        app:destination="@id/appbar" />
 
 </navigation>
